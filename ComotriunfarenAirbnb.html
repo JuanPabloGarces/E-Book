@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-book Premium | Aprende Rápido</title>
+  <link rel="stylesheet" href="Comotriunfarenairbnb.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    
+                    <div class="content-customer-support">
+                    </div>
+                </div>
+
+                <div class="container-logo">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h1 class="logo"><a href="/">E-BOOKS</a></h1>
+                </div>
+
+                <div class="container-user">
+
+                    
+                    <div class="content-shopping-cart">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Ebooks</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar..." />
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="content-banner">
+          <p>Libros para todos</p>
+          <h2>
+            Descubre cómo convertir tu propiedad <br>en un negocio rentable con Airbnb.</br>
+            <span class="subtitulo-banner">
+              Este e-book te guía paso a paso con estrategias reales, <br>consejos prácticos y casos de éxito para que empieces</br> a generar ingresos desde el primer mes.
+            </span>
+          </h2>
+          <a href="#">Comprar ahora</a>
+        </div>
+      </section>
+
+      <section class="imagenes-destacadas"> 
+        <div class="container">
+            <div class="imagen-item">
+                <img src="img/Documento A4 Página Revista Moda Elegante Sencilla Crema  (2).png" alt="Portada del libro">
+                <h4>Una guía visual para tu éxito</h4>
+                <p>La primera clave para empezar tu viaje como anfitrión profesional. Todo lo que necesitas saber, en un solo lugar.</p>
+            </div>
+            <div class="imagen-item">
+                <img src="img/Documento A4 Página Revista Moda Elegante Sencilla Crema .png" alt="Ejemplo de propiedad">
+                <h4>Establece tu papel</h4>
+                <p>Conoce los secretos para ser un anfitrión destacado. Aprende a crear una experiencia única para tus huéspedes.</p>
+            </div>
+            <div class="imagen-item">
+                <img src="img/Documento A4 Página Revista Moda Elegante Sencilla Crema  (1).png" alt="Testimonio de un cliente">
+                <h4>Práctica y resultados</h4>
+                <p>Ejercicios prácticos que te llevarán a una comprensión profunda, con ejemplos de casos reales.</p>
+            </div>
+        </div>
+    </section>
+    
+      
+<section class="temporizador">
+    <h2>🔥 ¡Descuento por tiempo limitado!</h2>
+    <div id="contador">
+      <div class="tiempo">
+        <span id="dias">00</span>
+        <small>Días</small>
+      </div>
+      <div class="separador">:</div>
+      <div class="tiempo">
+        <span id="horas">00</span>
+        <small>Horas</small>
+      </div>
+      <div class="separador">:</div>
+      <div class="tiempo">
+        <span id="minutos">00</span>
+        <small>Min</small>
+      </div>
+      <div class="separador">:</div>
+      <div class="tiempo">
+        <span id="segundos">00</span>
+        <small>Seg</small>
+      </div>
+    </div>
+</section>
+
+  
+  <script>
+    // Temporizador
+    var fin = new Date();
+    fin.setDate(fin.getDate() + 2); // 2 días de oferta
+
+    function actualizarTemporizador() {
+      var ahora = new Date().getTime();
+      var diferencia = fin - ahora;
+
+      if (diferencia > 0) {
+        var dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        var horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        var segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        document.getElementById('dias').textContent = dias;
+        document.getElementById('horas').textContent = horas;
+        document.getElementById('minutos').textContent = minutos;
+        document.getElementById('segundos').textContent = segundos;
+      } else {
+        document.getElementById('contador').innerHTML = "¡La oferta ha terminado!";
+      }
+    }
+
+    setInterval(actualizarTemporizador, 1000);
+  </script>
+
+<section class="venta-libro">
+    <div class="container">
+        <div class="info-libro">
+            <h2 class="titulo-libro">Triunfa en Airbnb: 10 Pasos para Ganar Dinero con o sin Propiedad</h2>
+            <p class="subtitulo">Aprende cómo generar ingresos en Airbnb sin necesidad de tener una propiedad propia. Este e-book te muestra el camino con estrategias probadas y accesibles para todos.</p>
+            
+            <div class="descripcion-libro">
+                <h3>¿Qué aprenderás en esta guía?</h3>
+                <p>Descubrirás desde cómo identificar oportunidades de negocio hasta cómo ofrecer una experiencia atractiva para los huéspedes, incluso si no eres dueño del inmueble.</p>
+                <p>Con un enfoque paso a paso, casos reales y herramientas prácticas, este libro te enseña a construir una fuente de ingresos sólida en el mundo del alojamiento digital.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container blogs">
+    <br></br
+    >
+
+    <div class="container-blogs">
+        <div class="card-blog">
+            <div class="container-img">
+                <img src="img/Diseño sin título (39).png" alt="Imagen Blog 1" />
+                
+            </div>
+            <div class="content-blog">
+                 
+            </div>
+        </div>
+        <div class="card-blog">
+            <div class="container-img">
+                <img src="img/Diseño sin título (38).png" alt="Imagen Blog 2" />
+                <div class="button-group-blog">
+             
+                    
+                </div>
+            </div>
+            <div class="content-blog">
+          
+            </div>
+        </div>
+        <div class="card-blog">
+            <div class="container-img">
+                <img src="img/Diseño sin título (37).png" alt="Imagen Blog 3" />
+                <div class="button-group-blog">
+                    
+                </div>
+            </div>
+            <div class="content-blog">
+      
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="beneficios-libro">
+    <div class="container">
+        <h2>¿Qué Aprenderás con Este Libro?</h2>
+        <div class="beneficios-lista">
+            <div class="beneficio-item">
+                <div class="icon"><i class="fas fa-home"></i></div>
+                <h3>Optimización de tu Propiedad</h3>
+                <p>Aprende a presentar tu propiedad de manera que atraiga más huéspedes, maximizando tu rentabilidad.</p>
+            </div>
+            <div class="beneficio-item">
+                <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                <h3>Mejores Precios y Rentabilidad</h3>
+                <p>Descubre cómo establecer tarifas competitivas para tu propiedad y obtener más ingresos por menos esfuerzo.</p>
+            </div>
+            <div class="beneficio-item">
+                <div class="icon"><i class="fas fa-star"></i></div>
+                <h3>Cómo Atraer Reseñas Positivas</h3>
+                <p>Conoce las mejores prácticas para ofrecer una experiencia memorable y conseguir reseñas positivas.</p>
+            </div>
+            <div class="beneficio-item">
+                <div class="icon"><i class="fas fa-trophy"></i></div>
+                <h3>Maximiza tu Éxito como Anfitrión</h3>
+                <p>Conviértete en un anfitrión exitoso siguiendo consejos clave para mejorar tu reputación y rentabilidad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-final">
+    <div class="container">
+        <h2>¿Listo para convertirte en un experto anfitrión?</h2>
+        <p>¡No esperes más para comenzar a generar ingresos con tu propiedad en Airbnb! Compra ahora y toma el control de tu futuro.</p>
+</section>
+
+<section class="venta-libro">
+    <div class="container">
+        <div class="info-libro">
+            <h2 class="titulo-libro">Conviértete en un Anfitrión Profesional con Airbnb</h2>
+            <p class="subtitulo">¡Descubre cómo hacer de tu propiedad un negocio rentable con nuestro exclusivo e-book! Guía práctica y estrategias reales para que generes ingresos rápidamente.</p>
+            
+            <div class="descripcion-libro">
+                <h3>¿Por qué este libro es para ti?</h3>
+                <p>Este libro es el manual definitivo para cualquier persona que quiera comenzar a ganar dinero con Airbnb. Aprenderás todo lo necesario, desde cómo preparar tu propiedad hasta cómo maximizar tus ingresos.</p>
+                <p>Con consejos prácticos, estrategias probadas y casos de éxito, lograrás ser un anfitrión profesional en poco tiempo.</p>
+            </div>
+
+            <div class="cta-compra">
+                <p class="precio">¡Solo $4.98!</p>
+                <a href="https://pay.hotmart.com/C99358673P" class="btn-compra">Compra ahora y comienza a generar ingresos</a>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
+
+
+
+
+
+
+<section class="galeria-libro">
+    <div class="container">
+      <h2>Una Mirada Real al Libro</h2>
+      <br></br>
+      <p class="galeria-texto">Explora algunas páginas, su diseño moderno y su contenido práctico. ¡Ya casi lo estás tocando!</p>
+      <div class="galeria-grid">
+        <img src="img/Documento A4 Página Revista Moda Elegante Sencilla Crema  (6).png" alt="Vista previa libro 1">
+        <img src="img/Documento A4 Página Revista Moda Elegante Sencilla Crema  (3).png" alt="Vista previa libro 2">
+        <img src="img/Documento A4 Página Revista Moda Elegante Sencilla Crema  (7).png" alt="Vista previa libro 3">
+        <img src="img/Documento A4 Página Revista Moda Elegante Sencilla Crema  (4).png" alt="Vista previa libro 4">
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+
+
+
+<section class="sobre-el-autor">
+    <div class="container">
+        <div class="autor-info">
+            <div class="foto-autor">
+                <img src="img/WhatsApp Image 2025-04-22 at 1.44.16 PM.jpeg" alt="Juan Pablo Garces Henao">
+            </div>
+            <div class="texto-autor">
+                <h3>Sobre el Autor</h3>
+                <p>Juan Pablo Garces Henao es un experto en el mundo de los alquileres a corto plazo y un apasionado por ayudar a los anfitriones a transformar sus propiedades en negocios rentables. Con años de experiencia en la plataforma de Airbnb, ha creado este e-book para compartir su conocimiento y ayudar a otros a tener éxito como anfitriones profesionales.</p>
+                <p>Con una formación sólida y casos de éxito, Juan Pablo ofrece estrategias probadas que te guiarán paso a paso, asegurando que logres obtener el máximo provecho de tu propiedad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="container container-footer">
+        <div class="menu-footer">
+            <div class="contact-info">
+                <p class="title-footer">Información de Contacto</p>
+                <ul>
+                    </li>
+                    <li>Teléfono: +57 301-631-7569</li>
+                    <li>EmaiL: juangarcesh223@gmail.com</li>
+                </ul>
+                <div class="social-icons">
+                    <span class="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </span>
+                    <span class="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <span class="youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </span>
+                    <span class="pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </span>
+                    <span class="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="information">
+                <p class="title-footer">Información</p>
+                <ul>
+                    <li><a href="#">Acerca de Nosotros</a></li>
+                    <li><a href="#">Información Delivery</a></li>
+                    <li><a href="#">Politicas de Privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Contactános</a></li>
+                </ul>
+            </div>
+
+            <div class="my-account">
+                <p class="title-footer">Mi cuenta</p>
+
+                <ul>
+                    <li><a href="#">Mi cuenta</a></li>
+                    <li><a href="#">Historial de ordenes</a></li>
+                    <li><a href="#">Lista de deseos</a></li>
+                    <li><a href="#">Boletín</a></li>
+                    <li><a href="#">Reembolsos</a></li>
+                </ul>
+            </div>
+
+            <div class="newsletter">
+                <p class="title-footer">Boletín informativo</p>
+
+                <div class="content">
+                    <p>
+                        Suscríbete a nuestros boletines ahora y mantente al
+                        día con nuevas colecciones y ofertas exclusivas.
+                    </p>
+                    <input type="email" placeholder="Ingresa el correo aquí...">
+                    <button>Suscríbete</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>
+                Desarrollado por Juan Pablo Garcés Henao &copy; 2025
+            </p>
+
+            <img src="img/payment.png" alt="Pagos">
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
