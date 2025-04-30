@@ -267,14 +267,14 @@ html {
 		width: 100%; /* Asegura que el contenido ocupe todo el ancho */
 		padding: 2rem; /* Añade espacio alrededor del contenido */
 		box-sizing: border-box;  /* Incluye el padding en el cálculo del ancho */
-		text-align: center; /* Centra el contenido */
+		text-align: center;
+		 /* Centra el contenido */
 	}
 
 	.content-banner p {
-		font-size: 1.6rem; /* Reduce el tamaño del texto */
-		padding-left: 1rem; /* Añade espacio a la izquierda */
-		padding-right: 1rem; /* Añade espacio a la derecha */
-	}
+		font-size: 2.4rem !important;
+		font-weight: bold;
+	  }
 
 	.content-banner h2 {
 		font-size: 2rem; /* Ajusta el tamaño de la fuente */
