@@ -254,32 +254,53 @@ html {
 	border-radius: 3rem;
 	font-size: 2rem;
 }
-
 /* ✅ Estilos para móviles */
 @media (max-width: 480px) {
 	.banner {
-		height: auto; /* ✅ Deja que el contenido determine la altura */
+		height: auto; /* Deja que el contenido determine la altura */
 		background-position: center;
+		padding: 2rem 0; /* Menos padding en la parte superior e inferior */
 	}
 
 	.content-banner {
-		padding: 6rem 2rem 4rem; /* ✅ Menos espacio arriba y abajo */
+		width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+		padding: 2rem; /* Añade espacio alrededor del contenido */
+		box-sizing: border-box;  /* Incluye el padding en el cálculo del ancho */
+		text-align: center; /* Centra el contenido */
+	}
+
+	.content-banner p {
+		font-size: 1.6rem; /* Reduce el tamaño del texto */
+		padding-left: 1rem; /* Añade espacio a la izquierda */
+		padding-right: 1rem; /* Añade espacio a la derecha */
 	}
 
 	.content-banner h2 {
-		font-size: 2rem;
+		font-size: 2rem; /* Ajusta el tamaño de la fuente */
+		padding-left: 1rem; /* Añade espacio a la izquierda */
+		padding-right: 1rem; /* Añade espacio a la derecha */
 	}
 
-	.content-banner p,
 	.subtitulo-banner {
-		font-size: 1.6rem;
+		font-size: 1.6rem; /* Ajusta el tamaño de la fuente */
+		padding-left: 1rem; /* Añade espacio a la izquierda */
+		padding-right: 1rem; /* Añade espacio a la derecha */
 	}
 
 	.content-banner a {
-		padding: 1.5rem 4rem;
-		font-size: 1.8rem;
+		padding: 1.5rem 3rem; /* Aumenta el padding para hacer el botón más grande */
+		font-size: 1.8rem; /* Ajusta el tamaño de la fuente */
+		background-color: var(--primary-color);
+		border-radius: 3rem;
+		text-decoration: none;
+		color: white;
+		margin-top: 2rem;
+		display: inline-block;
+		width: 80%; /* El botón ocupa el 80% del ancho */
+		max-width: 25rem; /* Evita que el botón sea demasiado grande */
 	}
 }
+
 
 
 
@@ -863,27 +884,27 @@ html {
 
 /* Descripción del libro */
 .descripcion-libro {
-    margin-bottom: 40px;  /* Aumento el espacio entre la descripción y el siguiente bloque */
+    margin-bottom: 40px;
 }
 
 .descripcion-libro h3 {
     font-size: 23px;
     font-weight: bold;
     color: rgb(49, 157, 247);
-    margin-bottom: 1px;  /* Aumento el margen para separar los títulos de los párrafos */
+    margin-bottom: 1px;
 }
 
 .descripcion-libro p {
     font-size: 18px;
     color: black;
-    margin-bottom: 15px; /* Aumento el margen entre los párrafos */
+    margin-bottom: 15px;
 }
 
 /* Estilo general para el botón */
 .cta-compra {
     width: 100%;
-    margin: 2rem 1rem;  /* Márgenes arriba y abajo, y 1rem a los lados */
-    font-size: 2.2rem;  /* Tamaño de fuente grande en PC */
+    margin: 2rem 1rem; /* Márgenes arriba y abajo, y 1rem a los lados */
+    font-size: 2.2rem; /* Tamaño de fuente grande en PC */
     padding: 2.5rem 5rem; /* Hacemos el botón grande en PC */
     text-align: center;
     display: inline-block;
@@ -922,22 +943,28 @@ html {
 @media (max-width: 480px) {
     /* Cambios importantes en celular */
     .cta-compra {
-        font-size: 2rem;  /* TAMAÑO MÁS GRANDE DEL BOTÓN EN CELULAR */
-        padding: 2.5rem 5rem;  /* MÁS PADDING PARA HACER EL BOTÓN MÁS GRANDE */
-        margin: 2rem auto;  /* Centrado en celular */
+        font-size: 1.8rem;  /* TAMAÑO MÁS PEQUEÑO DEL BOTÓN EN CELULAR */
+        padding: 1.5rem 2rem;  /* MENOS PADDING PARA QUE EL BOTÓN NO ESTÉ TAN GRANDE */
+        margin: 1.5rem auto;  /* Márgenes ajustados */
     }
 
     .precio {
-        font-size: 50px;  /* Ajustamos el tamaño del precio para que no se vea pequeño */
+        font-size: 40px;  /* Ajustamos el tamaño del precio para que no ocupe tanto espacio */
     }
 
     .btn-compra {
-        width: 100%; /* El botón ocupa el 90% del ancho */
-        font-size: 2.8rem; /* TAMAÑO DE FUENTE GRANDE EN CELULAR */
-        padding: 3rem 1.5rem; /* MÁS PADDING PARA HACER EL BOTÓN MÁS GRANDE */
-        margin: 2rem auto; /* Márgenes ajustados en móvil */
+        width: 90%; /* El botón ocupa el 90% del ancho */
+        font-size: 2.2rem; /* TAMAÑO DE FUENTE MÁS PEQUEÑO EN CELULAR */
+        padding: 2rem 2rem; /* Ajustamos el padding */
+        margin: 1.5rem auto; /* Márgenes ajustados */
     }
+
+	.descripcion-libro {
+        margin-bottom: 10px;  /* Reduce el margen inferior en móvil */
+    }
+
 }
+
 
 /* Estilo general para la galería de imágenes */
 .galeria-imagen {
@@ -976,25 +1003,40 @@ html {
 }
 
 /* Estilo para mantener la galería responsiva en dispositivos pequeños */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+    gap: 20px; /* espacio entre las imágenes */
+    margin-top: 20px;
+}
+
+.galeria-texto {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .galeria-texto {
-        font-size: 1.6rem; /* Tamaño de fuente ligeramente más pequeño */
+        font-size: 1.6rem;
     }
 
     .galeria-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Menor tamaño en pantallas pequeñas */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
 @media (max-width: 480px) {
     .galeria-texto {
-        font-size: 1.4rem; /* Fuente aún más pequeña en pantallas muy pequeñas */
+        font-size: 1.4rem;
     }
 
     .galeria-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Mejor ajuste de imágenes en pantallas muy pequeñas */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
+
 
 
 
