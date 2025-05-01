@@ -936,7 +936,7 @@ html {
 
 /* Efecto hover para el botón */
 .btn-compra:hover {
-    background: rgb(8, 226, 8); /* Efecto hover */
+    background: rgb(9, 182, 9);  /* Efecto hover */
 }
 
 /* Ajustes en dispositivos pequeños (cambio aquí) */
